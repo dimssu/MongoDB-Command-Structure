@@ -9,3 +9,5 @@ db.inventory.find( { status: "A", qty: { $lt: 30 } } )
 
 //OR
 db.inventory.find( { $or: [ { status: "A" }, { qty: { $lt: 30 } } ] } )
+
+db.inventory.findOne( { status: { $in: [ "A", "D" ] } } )
